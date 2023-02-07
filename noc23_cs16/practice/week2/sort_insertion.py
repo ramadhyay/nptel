@@ -17,7 +17,8 @@ def insertion_sort_iter(arr):
         for j in range(i,0,-1):
             if arr[j] < arr[j-1]:
                 arr[j-1],arr[j]=arr[j],arr[j-1]
-
+            else:
+                break
 
 # Insertion sort recursive
 # Insert value at 'pos' into array arr which is sotred 'before' poisition pos

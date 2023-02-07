@@ -29,6 +29,7 @@ def merge(arr1,arr2):
 
     return arr
 
+# Using indices... painful...
 def merge2(arr1,arr2):
     arr=[]
     
