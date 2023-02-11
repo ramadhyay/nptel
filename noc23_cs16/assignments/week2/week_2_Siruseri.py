@@ -9,11 +9,12 @@ Created on Mon Feb  6 02:33:42 2023
 singers=[]
 ranges=[]
 
+
+# Input capture
 n=input()
 n=int(n)
 if n <= 0:
     print("Enter a value greater than 0")
-
 
 
 for i in range(0,n):
@@ -24,6 +25,7 @@ for i in range(0,n):
     singers.append(ranges)
 
 
+# This is the Quick Sort.
 def partition(arr,lower,upper):
     #pivot index is always 0
     p_idx = lower+1
@@ -43,21 +45,18 @@ def quick_sort(arr,lower,upper):
     quick_sort(arr,lower,p_idx)
     quick_sort(arr,p_idx,upper)
 
+# Test data..
 # print(singers)
 # n=5
 # singers=[[23-3,0],[20-4,1],[16-11,2],[19-5,3],[25-1,4]]
 
 
+# This array stores the position of an original array element in the sorted array
 arr_out=[None]*n
-
-# def insertion_sort(arr):
-#     for i in range(0, len(arr)):
-#         for j in range(i,0,-1):
-#             if arr[j][0] < arr[j-1][0]:
-#                 arr[j-1],arr[j]=arr[j],arr[j-1]
 
 quick_sort(singers,0,len(singers)) 
 
+# Get the position of the original sort
 for i in range(0,len(singers)):
     arr_out[singers[i][1]] = i
 
