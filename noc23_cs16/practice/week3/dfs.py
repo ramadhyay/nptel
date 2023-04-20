@@ -38,17 +38,15 @@ def dfs(G,v):
 
     global counter 
     dfs_counter[v]=[]
-    dfs_counter[v].append(counter)
+    dfs_counter[v].append(counter) # Entry Node
     counter = counter+1
     
     for neighbour in G[v]:
         if neighbour not in visited:
             parent[neighbour]=v
             dfs(G,neighbour)
-    dfs_counter[v].append(counter)
+    dfs_counter[v].append(counter) # Exit Node
     counter += 1
-        
-    
     
 dfs(graph,4)    
 

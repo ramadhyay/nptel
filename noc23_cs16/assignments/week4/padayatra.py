@@ -564,7 +564,7 @@ def add_edge(G,u,v,w):
     else:
         G[v] = [v,u,w]
     
-
+# Dijkstra
 def shortpath(G,start,end):
     d[start]=0
     priority_queue.put([d[start],start])

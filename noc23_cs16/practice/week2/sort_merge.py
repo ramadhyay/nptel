@@ -9,6 +9,8 @@ Created on Sun Feb  5 21:28:27 2023
 arr=[1,3,5,10,2,2,0,1,2,3]
 
 # A more natural and intiutive way to look at array and also saves space while merge sort
+# on second thought this wont work in C because basically what we call an array here is infact a 
+# list!!!. If you, ideally you need to use "array" object in python to handle this
 def merge(arr1,arr2):
     arr=[]
     
@@ -29,7 +31,8 @@ def merge(arr1,arr2):
 
     return arr
 
-# Using indices... painful...
+# Using indices... painful... but translates to c language. 
+# If some is evaluating then this is the the way
 def merge2(arr1,arr2):
     arr=[]
     

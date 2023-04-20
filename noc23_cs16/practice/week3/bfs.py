@@ -23,7 +23,7 @@ queue=[]
 visited=[]
 level={}
 
-queue.append(1)
+queue.append(1) #Starting node
 visited.append(1)
 level[1]=0
 parent={}
